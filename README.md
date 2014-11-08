@@ -19,6 +19,7 @@ So what I do is usually:
 
 See also: https://wiki.archlinux.org/index.php/FFmpeg
 
+Quality: http://stackoverflow.com/questions/25569180/ffmpeg-convert-without-loss-quality
 
 
 
