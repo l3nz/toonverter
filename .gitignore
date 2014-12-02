@@ -1,0 +1,7 @@
+*.avi
+*.mkv
+*.mp4
+*.wmv
+.DS_Store
+ffmpeg2pass-0.log
+
