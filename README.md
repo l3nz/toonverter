@@ -13,13 +13,29 @@ This old DVD player has a few limitations (that I learn about by toying with it)
 So what I do is usually:
 
 * Take video in any modern format
-* Convert it to 640x making sure the vertical size is a multiple of 8, trying to minimize aspect ratio changes
+* Convert it to 640px making sure the vertical size is a multiple of 8, trying to minimize aspect ratio changes
 * Do a two-pass conversion
 
+Using it
+--------
+
+How to run the scripts:
+
+	./convert_all.sh substring
+
+Converts all the files that contain substring (case-sensitive) to .avi's.
+
+	./convert_xvid.sh filename
+
+Converts one single file to file.avi, having a size which is no more than 640px across,
+and the correct number of vertical pixes, as the closest multiple of 8.
+
+See also
+--------
 
 See also: https://wiki.archlinux.org/index.php/FFmpeg
 
-Quality: http://stackoverflow.com/questions/25569180/ffmpeg-convert-without-loss-quality
+On quality: http://stackoverflow.com/questions/25569180/ffmpeg-convert-without-loss-quality
 
 
 
