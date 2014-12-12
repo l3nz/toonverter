@@ -20,13 +20,14 @@ SIZE="-s $VSIZE -r 25 -b:v 1200k"
 echo "Converting $FILEIN as $SIZE"
 
 #ONEMINUTE="-t 3:00"
-#ONEMINUTE=
-VIDEO="-vtag DIVX -c:v mpeg4 -f avi $SIZE"
+VIDEO="-vtag DIVX -c:v mpeg4 -movflags faststart -f avi $SIZE"
 AUDIO="-acodec libmp3lame -ac 2 -vol 256 -b:a 128k"
+MAPS="-map 0:v:0 -map 0:a:0"
+#MAPS="-map 0:v:0 -map 0:a:0 -filter_complex '[0:v][0:s]overlay'"
 NOAUDIO="-an"
 
 rm -f ffmpeg2pass-0.log
-$FFMPEG  -i "$FILEIN" $ONEMINUTE $VIDEO $NOAUDIO -pass 1 -y /dev/null
-$FFMPEG  -i "$FILEIN" $ONEMINUTE $VIDEO $AUDIO   -pass 2 "$FILEOUT"
+$FFMPEG  -i "$FILEIN" $ONEMINUTE $VIDEO $MAPS $NOAUDIO -pass 1 -y /dev/null
+$FFMPEG  -i "$FILEIN" $ONEMINUTE $VIDEO $MAPS $AUDIO   -pass 2 "$FILEOUT"
 
 
