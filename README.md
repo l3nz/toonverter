@@ -30,6 +30,16 @@ Converts all the files that contain substring (case-sensitive) to .avi's.
 Converts one single file to file.avi, having a size which is no more than 640px across,
 and the correct number of vertical pixes, as the closest multiple of 8.
 
+
+Special tweaks
+--------------
+
+* How do I change the screen width? edit optsize.pl
+* How do I choose a specific audio-video stream? edit convert_xvid.sh and modify MAPS. "-map 0:a:1" means that 
+  stream 0 for audio in the encoded file is stream 1 in the source.
+* How do I add subtitles? 
+
+
 See also
 --------
 
